@@ -4,7 +4,14 @@
 
 
 <template>
-  Hello World
+  <section class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Houses</h1>
+      </div>
+    </div>
+    <HouseCard />
+  </section>
 </template>
 
 
