@@ -27,6 +27,6 @@
 }
 
 .house-card {
-  background-color: beige;
+  background-color: rgb(245, 245, 209);
 }
 </style>
