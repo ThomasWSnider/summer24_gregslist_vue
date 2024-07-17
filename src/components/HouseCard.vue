@@ -7,7 +7,7 @@ defineProps({ house: { type: House } })
 
 
 <template>
-  <div class="row house-card rounded mb-2 px-0">
+  <div class="row house-card rounded mb-4 px-0 shadow">
     <div class="col-12 px-0">
       <img :src="house.imgUrl" :alt="`${house.creator.name}'s home`" class="img-fluid house-img px-0 rounded-top mb-2"
         :title="`${house.creator.name}'s home`">
