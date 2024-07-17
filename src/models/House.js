@@ -14,4 +14,3 @@ export class House {
     this.creator = data.creator
   }
 }
-
