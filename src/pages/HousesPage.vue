@@ -6,6 +6,7 @@ import { housesService } from "../services/HousesService";
 import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";
 import { AppState } from "../AppState";
+import HouseForm from "../components/HouseForm.vue";
 
 // const start = ref(0)
 // const end = ref(10)
@@ -34,7 +35,7 @@ async function getHouses() {
         <div class="d-flex justify-content-between align-items-center">
           <h1>Houses</h1>
           <button v-if="account" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#carFormModal">Create
-            Car
+            House
             Listing</button>
         </div>
       </div>
@@ -42,10 +43,16 @@ async function getHouses() {
     <div v-for="house in houses" :key="house.id" class="row">
       <HouseCard :house="house" />
     </div>
-
   </section>
 
-  <FormModal />
+  <FormModal>
+    <template #modalHeader>
+      House Submission Form
+    </template>
+    <template #modalBody>
+      <HouseForm modalId="houseFormModal" />
+    </template>
+  </FormModal>
 </template>
 
 
